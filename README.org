@@ -4,7 +4,7 @@ A simple image resize lambda function, written in Rust.
 
 This binary responds to Amazon S3 events and triggers a resize on the uploaded image with the sizes specified. As for now resizes the width of an image, keeping still the image ratio.
 
-**  Configure
+** Configure
 
 This binary relies on following environmental variable:
 
@@ -14,10 +14,10 @@ Resized image will be PUT back into same bucket as =filename-thumb.png=
 
 ** Compile
 
-Use [Lambda-Rust docker image](https://hub.docker.com/r/softprops/lambda-rust/) to compile this binary. With Docker running run the following command to build a release.
+Use [[https://hub.docker.com/r/softprops/lambda-rust/][Lambda-Rust docker image]] to compile this binary. With Docker running run the following command to build a release.
 
-```
+#+begin_src shell
 make build
-```
+#+end_src
 
-You can find the (zipped) bootstrap ready for upload to AWS Lambda in `target/lambda/release/bootstrap.zip`
+You can find the (zipped) bootstrap ready for upload to AWS Lambda in =target/lambda/release/bootstrap.zip=
